@@ -14,6 +14,6 @@ export const SOCIAL_LINKS = {
   github: 'https://github.com/parthesaurabh1616',
   linkedin: 'https://www.linkedin.com/in/saurabhparthe/',
   email: 'mailto:saurabh.parthe.1@gmail.com',
-  resume: '/resume.pdf',
+  resume: 'https://www.linkedin.com/in/saurabhparthe/',
   domain: 'https://www.saurabhparthe.in',
 };

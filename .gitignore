@@ -36,3 +36,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal / helper files — never commit these
+public/resume.pdf
+push-to-github.ps1
+push-to-github.sh
+GITHUB_PUSH.md
+DEPLOYMENT_GUIDE.md
