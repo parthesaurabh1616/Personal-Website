@@ -2,12 +2,12 @@ import type { ResearchPost } from '@/types';
 
 export const RESEARCH_POSTS: ResearchPost[] = [
   {
-    title: 'Kafka Internals: Partitions, ISRs, and the Cost of Ordering',
+    title: 'Building Production REST APIs in Go',
     summary:
-      'A deep dive into how Kafka guarantees ordering, how ISR replication shapes durability, and the trade-offs between throughput and consistency at scale.',
-    category: 'Streaming Systems',
-    readTime: '12 min',
-    topics: ['Kafka', 'Replication', 'Ordering', 'Throughput'],
+      'Versioning, request validation, middleware chains, graceful shutdown, and the patterns that separate a hobby project from a service that runs at 3 AM.',
+    category: 'Backend Engineering',
+    readTime: '10 min',
+    topics: ['Golang', 'REST', 'API Design', 'Middleware'],
   },
   {
     title: 'Golang Concurrency Patterns for Production Backends',
@@ -18,12 +18,20 @@ export const RESEARCH_POSTS: ResearchPost[] = [
     topics: ['Golang', 'Concurrency', 'Worker Pools'],
   },
   {
-    title: 'Distributed Tracing in Microservice Topologies',
+    title: 'SRE in Practice: SLOs, Error Budgets, and On-Call That Works',
     summary:
-      'Building causality across services with OpenTelemetry — context propagation, sampling strategies, and reading flame graphs across regions.',
-    category: 'Observability',
-    readTime: '11 min',
-    topics: ['Tracing', 'OpenTelemetry', 'Microservices'],
+      'How to define SLOs that actually reflect user experience, burn error budgets intentionally, and build runbooks that survive a 2 AM incident.',
+    category: 'SRE',
+    readTime: '12 min',
+    topics: ['SLO', 'Error Budget', 'On-Call', 'Runbooks'],
+  },
+  {
+    title: 'Kafka Internals: Partitions, ISRs, and the Cost of Ordering',
+    summary:
+      'A deep dive into how Kafka guarantees ordering, how ISR replication shapes durability, and the trade-offs between throughput and consistency at scale.',
+    category: 'Distributed Systems',
+    readTime: '12 min',
+    topics: ['Kafka', 'Replication', 'Ordering', 'Throughput'],
   },
   {
     title: 'Kubernetes Scaling Strategies Beyond HPA',
@@ -40,13 +48,5 @@ export const RESEARCH_POSTS: ResearchPost[] = [
     category: 'Distributed Systems',
     readTime: '13 min',
     topics: ['Event-Driven', 'Sagas', 'Outbox', 'Idempotency'],
-  },
-  {
-    title: 'AI Infrastructure: Serving Models at Sub-50ms Latency',
-    summary:
-      'Inference graphs, GPU pooling, batching strategies, and the engineering behind keeping ML models hot under bursty traffic.',
-    category: 'AI Infrastructure',
-    readTime: '15 min',
-    topics: ['ML Serving', 'GPU', 'Batching', 'Latency'],
   },
 ];

@@ -30,7 +30,7 @@ export function Hero() {
         >
           <StatusDot />
           <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/80">
-            Live · Edge AI · Distributed Systems
+            Live · Backend · Distributed Systems · SRE
           </span>
         </motion.div>
 
@@ -51,7 +51,7 @@ export function Hero() {
           transition={{ delay: 0.25, duration: 0.8 }}
           className="mt-6 max-w-2xl font-display text-lg text-white/80 md:text-xl"
         >
-          Distributed Systems & AI Infrastructure Engineer
+          Software Engineer · Distributed Systems · SRE
         </motion.p>
 
         <motion.p
@@ -60,13 +60,14 @@ export function Hero() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="mt-4 max-w-2xl text-base leading-relaxed text-white/55 md:text-lg"
         >
-          Building scalable intelligent systems with{' '}
+          Building and operating production backend systems with{' '}
           <span className="text-white">Golang</span>,{' '}
-          <span className="text-white">Python</span>,{' '}
-          <span className="text-white">Kubernetes</span>,{' '}
-          <span className="text-white">Kafka</span>, and{' '}
-          <span className="text-white">Machine Learning</span>. Designing the
-          infrastructure layer for real-time, intelligent, fault-tolerant systems.
+          <span className="text-white">Java</span>, and{' '}
+          <span className="text-white">Python</span>. Specialising in{' '}
+          <span className="text-white">distributed systems</span>,{' '}
+          <span className="text-white">Kubernetes</span>, and{' '}
+          <span className="text-white">Kafka</span> — writing software that is
+          reliable, observable, and built to scale.
         </motion.p>
 
         <motion.div

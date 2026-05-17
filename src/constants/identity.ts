@@ -17,12 +17,28 @@ export interface IdentityPillar {
 
 export const IDENTITY_PILLARS: IdentityPillar[] = [
   {
+    title: 'Backend Engineering',
+    description:
+      'Designing and shipping production-grade APIs, microservices, and backend systems in Go, Java, and Python — clean contracts, testable code, and reliable delivery.',
+    icon: Layers,
+    signal: 'Go · Java · REST · gRPC',
+    metric: '30+ services owned',
+  },
+  {
     title: 'Distributed Systems',
     description:
-      'Designing systems that stay consistent, available, and observable as they scale across regions, nodes, and failure domains.',
+      'Building systems that stay consistent, available, and observable as they scale across regions, nodes, and failure domains.',
     icon: Network,
     signal: 'Consensus · Replication · Partitioning',
     metric: 'CAP-aware design',
+  },
+  {
+    title: 'SRE & Reliability',
+    description:
+      'Defining SLOs, owning on-call, and engineering the observability stack — metrics, logs, traces — so incidents are caught before users notice.',
+    icon: Activity,
+    signal: 'Prometheus · Grafana · OpenTelemetry',
+    metric: '99.99% uptime',
   },
   {
     title: 'Event-Driven Architecture',
@@ -33,35 +49,19 @@ export const IDENTITY_PILLARS: IdentityPillar[] = [
     metric: '500K events / sec',
   },
   {
-    title: 'AI Infrastructure',
+    title: 'Kubernetes & Cloud Native',
     description:
-      'Serving and orchestrating ML workloads — from edge inference to GPU-backed model fleets — with operational discipline.',
-    icon: Cpu,
-    signal: 'Serving · Batching · GPU Pools',
-    metric: 'Sub-50ms inference',
-  },
-  {
-    title: 'Kubernetes Orchestration',
-    description:
-      'Production-grade Kubernetes — custom HPAs, KEDA, service mesh, multi-tenant clusters, and zero-downtime rollouts.',
+      'Production-grade Kubernetes — custom HPAs, KEDA, service mesh, multi-tenant clusters, and zero-downtime rollouts on AWS.',
     icon: Boxes,
     signal: 'HPA · KEDA · Helm · Istio',
     metric: 'Auto 4–40 nodes',
   },
   {
-    title: 'Real-Time Processing',
+    title: 'AI Infrastructure',
     description:
-      'Stream processing pipelines that hold latency budgets and degrade gracefully under bursty load and backpressure.',
-    icon: Activity,
-    signal: 'Streams · Backpressure · QoS',
-    metric: 'p99 < 80ms',
-  },
-  {
-    title: 'Scalable Backend Systems',
-    description:
-      'High-performance Go and Java services — clean architecture, observability baked in, and SLOs that mean something.',
-    icon: Layers,
-    signal: 'Go · Java · gRPC · REST',
-    metric: '30+ services owned',
+      'Integrating and operating ML workloads in production — edge inference, model serving pipelines, and GPU-backed infrastructure.',
+    icon: Cpu,
+    signal: 'Inference · Batching · GPU Pools',
+    metric: 'Sub-50ms inference',
   },
 ];

@@ -45,7 +45,7 @@ export function Contact() {
           <SectionHeader
             eyebrow="09 / Contact"
             title="Let's build the infrastructure layer of intelligent systems."
-            description="Available for senior distributed systems and AI infrastructure roles, advisory work, and high-leverage engineering collaborations."
+            description="Available for software engineering roles across backend, distributed systems, and SRE — and open to advisory work and high-leverage engineering collaborations."
             align="center"
             className="mx-auto"
           />
