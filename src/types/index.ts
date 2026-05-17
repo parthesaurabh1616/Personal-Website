@@ -10,6 +10,7 @@ export interface Project {
   architecture: string[];
   domain: string;
   status: 'production' | 'research' | 'experimental';
+  githubUrl?: string;
 }
 
 export interface Experience {

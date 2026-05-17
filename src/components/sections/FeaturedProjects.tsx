@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ChevronRight, Server, Gauge, GitBranch } from 'lucide-react';
+import { ChevronRight, Server, Gauge, GitBranch, Github, ExternalLink } from 'lucide-react';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { GlowCard } from '@/components/ui/GlowCard';
 import { Tag } from '@/components/ui/Tag';
@@ -40,7 +40,7 @@ export function FeaturedProjects() {
         />
 
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-[340px,1fr]">
-          {/* Project list */}
+          {/* ── Project list ─────────────────────────────────────────── */}
           <motion.aside
             variants={staggerContainer}
             initial="hidden"
@@ -63,7 +63,7 @@ export function FeaturedProjects() {
                 <div className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] font-mono text-[10px] text-white/70">
                   0{i + 1}
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <StatusDot variant={statusVariant[p.status]} />
                     <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/50">
@@ -86,27 +86,46 @@ export function FeaturedProjects() {
             ))}
           </motion.aside>
 
-          {/* Detail */}
+          {/* ── Detail panel ─────────────────────────────────────────── */}
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.45 }}
           >
             <GlowCard className="p-8" interactive>
-              <div className="flex flex-wrap items-center gap-2">
-                <Tag intent="blue">{project.domain}</Tag>
-                <Tag intent={statusVariant[project.status] === 'green' ? 'green' : 'purple'}>
-                  {statusLabel[project.status]}
-                </Tag>
+
+              {/* Header: tags + GitHub link */}
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Tag intent="blue">{project.domain}</Tag>
+                  <Tag intent={statusVariant[project.status] === 'green' ? 'green' : 'purple'}>
+                    {statusLabel[project.status]}
+                  </Tag>
+                </div>
+
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.04] px-3.5 py-1.5 font-mono text-[11px] text-white/60 transition-all duration-200 hover:border-accent-blue/50 hover:bg-accent-blue/[0.08] hover:text-white"
+                  >
+                    <Github size={13} />
+                    <span>View on GitHub</span>
+                    <ExternalLink size={10} className="opacity-50" />
+                  </a>
+                )}
               </div>
+
+              {/* Title + description */}
               <h3 className="mt-5 font-display text-3xl font-semibold text-white md:text-4xl">
                 {project.title}
               </h3>
               <p className="mt-3 text-white/65">{project.description}</p>
-              <p className="mt-3 text-sm leading-relaxed text-white/55">{project.longDescription}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/50">{project.longDescription}</p>
 
-              {/* metrics */}
+              {/* Metrics */}
               <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {project.metrics.map((m) => (
                   <div
@@ -121,6 +140,7 @@ export function FeaturedProjects() {
                 ))}
               </div>
 
+              {/* Features + Architecture */}
               <div className="mt-7 grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <div className="mb-3 flex items-center gap-2">
@@ -132,7 +152,7 @@ export function FeaturedProjects() {
                   <ul className="space-y-2">
                     {project.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-white/65">
-                        <span className="mt-1.5 inline-block h-1 w-1 rounded-full bg-accent-blue" />
+                        <span className="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-accent-blue" />
                         <span>{f}</span>
                       </li>
                     ))}
@@ -148,7 +168,7 @@ export function FeaturedProjects() {
                   <ul className="space-y-2">
                     {project.architecture.map((a) => (
                       <li key={a} className="flex items-start gap-2 text-sm text-white/65">
-                        <span className="mt-1.5 inline-block h-1 w-1 rounded-full bg-accent-purple" />
+                        <span className="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-accent-purple" />
                         <span>{a}</span>
                       </li>
                     ))}
@@ -156,6 +176,7 @@ export function FeaturedProjects() {
                 </div>
               </div>
 
+              {/* Stack + full-width GitHub CTA */}
               <div className="mt-7 border-t border-white/10 pt-5">
                 <div className="mb-3 flex items-center gap-2">
                   <GitBranch size={14} className="text-accent-cyan" />
@@ -170,6 +191,19 @@ export function FeaturedProjects() {
                     </Tag>
                   ))}
                 </div>
+
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] py-3 text-sm text-white/60 transition-all duration-200 hover:border-accent-blue/40 hover:bg-accent-blue/[0.06] hover:text-white"
+                  >
+                    <Github size={15} />
+                    <span>Open repository on GitHub</span>
+                    <ExternalLink size={12} className="opacity-50" />
+                  </a>
+                )}
               </div>
             </GlowCard>
           </motion.div>
