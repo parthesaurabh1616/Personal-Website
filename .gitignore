@@ -37,8 +37,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# personal / helper files — never commit these
-public/resume.pdf
+# helper files — never commit these
 push-to-github.ps1
 push-to-github.sh
 GITHUB_PUSH.md
