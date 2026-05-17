@@ -33,10 +33,21 @@ export interface NavItem {
   href: string;
 }
 
+export type ContentBlock =
+  | { t: 'p'; v: string }
+  | { t: 'h2'; v: string }
+  | { t: 'h3'; v: string }
+  | { t: 'code'; lang: string; v: string }
+  | { t: 'ul'; v: string[] }
+  | { t: 'note'; v: string };
+
 export interface ResearchPost {
+  slug: string;
   title: string;
   summary: string;
   category: string;
   readTime: string;
+  publishedAt: string;
   topics: string[];
+  content: ContentBlock[];
 }
