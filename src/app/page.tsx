@@ -1,9 +1,7 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
-import { EngineeringIdentity } from '@/components/sections/EngineeringIdentity';
 import { FeaturedProjects } from '@/components/sections/FeaturedProjects';
-import { SystemDesign } from '@/components/sections/SystemDesign';
 import { ExperienceSection } from '@/components/sections/Experience';
 import { TechStack } from '@/components/sections/TechStack';
 import { Metrics } from '@/components/sections/Metrics';
@@ -16,9 +14,7 @@ export default function HomePage() {
     <main className="relative min-h-screen w-full overflow-x-hidden bg-background">
       <Navbar />
       <Hero />
-      <EngineeringIdentity />
       <FeaturedProjects />
-      <SystemDesign />
       <ExperienceSection />
       <TechStack />
       <Metrics />
