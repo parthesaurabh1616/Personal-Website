@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, FlaskConical, FolderGit2 } from 'lucide-react';
+import { ArrowRight, Mail, FolderGit2, FileDown } from 'lucide-react';
 import { NeuralTopology } from '@/components/visuals/NeuralTopology';
 import { GridBackground } from '@/components/visuals/GridBackground';
 import { DataStream } from '@/components/visuals/DataStream';
@@ -79,9 +79,14 @@ export function Hero() {
           <LinkButton href="#projects" variant="primary" icon={<ArrowRight size={14} />}>
             View Projects
           </LinkButton>
-          <LinkButton href="#research" variant="secondary" icon={<FlaskConical size={14} />}>
-            Research Work
-          </LinkButton>
+          <a
+            href="/resume.pdf"
+            download="Saurabh_Parthe_Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.05] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80 backdrop-blur-sm transition-all hover:border-accent-blue/40 hover:bg-accent-blue/[0.08] hover:text-white"
+          >
+            <FileDown size={14} />
+            Download Resume
+          </a>
           <LinkButton href="#contact" variant="ghost" icon={<Mail size={14} />}>
             Contact
           </LinkButton>
