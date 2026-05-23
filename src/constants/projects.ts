@@ -171,4 +171,38 @@ export const PROJECTS: Project[] = [
     status: 'production',
     githubUrl: 'https://github.com/parthesaurabh1616/Financial-Event-Processing-Engine',
   },
+  {
+    id: 'multi-agent-geopolitics',
+    title: 'Multi-Agent Geopolitics Intelligence System',
+    tagline: 'LangGraph 5-agent pipeline for real-time geopolitical analysis',
+    description:
+      'Autonomous intelligence system that aggregates news from 10+ global RSS feeds, runs NER and sentiment analysis, performs FAISS semantic search, and uses Claude tool_use to produce structured geopolitical analysis — all orchestrated in a LangGraph StateGraph pipeline.',
+    longDescription:
+      'Five-agent LangGraph pipeline: NewsFetcher aggregates BBC, Reuters, Al Jazeera, Foreign Policy, CFR and more with Redis caching; NLPProcessor runs spaCy NER (GPE/PERSON/ORG) and DistilBERT sentiment per article; Analyst builds a FAISS IndexFlatIP over all articles and calls Claude via tool_use for structured geopolitical analysis and risk assessment; TrendDetector scores topic coverage and maps conflict hotspots; Synthesizer generates a final intelligence briefing.',
+    stack: ['Python', 'LangGraph', 'Claude API', 'FAISS', 'spaCy', 'Transformers', 'FastAPI', 'Redis', 'Docker'],
+    features: [
+      'LangGraph StateGraph with conditional routing — short-circuits on fetch failure',
+      'Claude tool_use: submit_geopolitical_analysis for structured analysis + risk assessment',
+      'FAISS IndexFlatIP — normalized cosine similarity for semantic article ranking',
+      'spaCy en_core_web_sm NER: GPE, PERSON, ORG, EVENT extraction across all articles',
+      'DistilBERT sentiment pipeline — per-article polarity scoring for hotspot detection',
+      'Redis article cache with TTL — avoids redundant fetches across repeated queries',
+    ],
+    metrics: [
+      { label: 'News Sources', value: '10+ feeds' },
+      { label: 'Pipeline Agents', value: '5 agents' },
+      { label: 'Semantic Search', value: 'FAISS + MiniLM' },
+      { label: 'Analysis', value: 'Claude tool_use' },
+    ],
+    architecture: [
+      'NewsFetcher → 10 RSS feeds (BBC, Reuters, Al Jazeera, FP, CFR...) + Redis cache',
+      'NLPProcessor → spaCy NER + DistilBERT sentiment + topic classification',
+      'Analyst → FAISS semantic search → Claude tool_use → geopolitical analysis',
+      'TrendDetector → frequency scoring, hotspot mapping, geographic focus',
+      'Synthesizer → Claude final intelligence briefing with all agent outputs',
+    ],
+    domain: 'AI Agents · Geopolitics · NLP',
+    status: 'research',
+    githubUrl: 'https://github.com/parthesaurabh1616/Multi-Agent',
+  },
 ];
